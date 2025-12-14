@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <h1>ログイン</h1>
+   
+  <form id="loginForm">
+    <div class="div-username">
+      <label>ユーザー名：</label>
+      <input type="text" id="username" placeholder="メールアドレス/会員ID">
+      <span id="usernameError" class="error"></span>
+    </div>
+    <div class="div-password">
+      <label>パスワード：</label>
+      <input type="password" id="password" placeholder="6文字以上のパスワード">
+      <span id="passwordError" class="error"></span>
+      <div class="password-helper">
+        <p class="password-hint">パスワードには特殊な記号含めません</p>
+        <a href="#" class="password-forget">パスワードをお忘れの方</a>
+      </div>
+    </div>
+    <button type="button" id="loginBtn">次へ</button>
+    <button type="button" id="signupBtn">新規取得</button>
+  </form>
+  
+
+  <!--　messageBox -->
+  <div id="messageBox" class="hidden"></div>
+
+  <!-- JavaScript -->
+  <script src="./js/loginpage.js"></script>
+</body>
+</html>

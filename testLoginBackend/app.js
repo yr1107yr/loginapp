@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const pool = require('./database');
 
 const express = require('express');
+const path = require('path');
 const cors = require("cors");
 const app = express();
 // 解析 JSON 请求体
@@ -90,6 +91,11 @@ app.post('/login', async (req, res) => {
     return res.json({ success: false, message: 'サーバーエラーが発生しました' });
   }
 });
+
+//homepage
+app.use(express.static(
+  path.join(__dirname, '../testLoginPage')
+));
 
 app.listen(3000, () => {
   console.log('サーバーが起動しました：http://localhost:3000');

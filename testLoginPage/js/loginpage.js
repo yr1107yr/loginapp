@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     messageBox.className = ""; // 清空旧样式 Clear
     messageBox.classList.add(type); // 添加 success 或 errorBox
     messageBox.classList.remove("hidden");
-    setTimeout(() => messageBox.classList.add("hidden"), 3000);
+    setTimeout(() => messageBox.classList.add("hidden"), 7000);
   }
 
   // 输入校验  Input validation
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
           : `ようこそ、${username}会員IDでログインされました。`;
 
         showMessage(welcomeMessage, "success");
-        // window.location.href = "/home.html";
+          window.location.href = "/home.html";
       } else {
         // Login failed
         if (data.message.includes("ユーザー名")) {
